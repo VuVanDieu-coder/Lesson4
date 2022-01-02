@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="less2.css">
+        <h5><u>Tính diện tích hình chữ nhật</u></h5>
+        <p>Nhập chiều dài</p><br>
+        <input type="number" id="width">
+        <p>Nhập chiều rộng</p><br>
+        <input type="number" id="height">
+        <p>Kết quả</p>
+        <input type="number" name="Diện tích" id="result">
+        <br>
+        <br>
+        <button onclick="math_area()">Tính toán</button>
+        <button type="reset" onclick="reset()">Tính lại</button>
+</body>
+</html>
+<script>
+    function math_area(){
+        let height=document.getElementById("height").value;
+        let width = document.getElementById("width").value;
+        let result="";
+
+        result=height*width;
+        document.getElementById("result").value=result;
+    }
+    function reset(){
+        height.value="";
+        width.value="";
+        result.value="";
+    }
+</script>
