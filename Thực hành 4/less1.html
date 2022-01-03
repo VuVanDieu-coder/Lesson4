@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>TÍNH DIỆN TÍCH CÁC HÌNH</h1>
+ <p>Lựa chọn các hình:</p>
+ <select name="myselect" onchange="do_something()" id="myselect">
+     <option value="areaREC">Hình chữ Nhật</option>
+     <option value="areaSQA">Hình Vuông</option>
+     <option value="areaCIR">Hình Tròn</option>
+ </select>
+ <!-- Tạo form nhập dữ liệu tính diện tích -->
+ <link rel="stylesheet" href="form_REC.html" id="form_REC">
+ <link rel="stylesheet" href="form_SQA.html" id="form_SQA">
+ <link rel="stylesheet" href="form_CIR.html" id="form_CIR">
+
+ <form action="" id="form_REC">
+    <p>Nhập chiều cao</p>
+    <input type="number" id="heightREC">
+    <p>Nhập chiều rộng</p>
+    <input type="number" id="widthREC">
+</form>
+
+<form action="" id="form_SQA">
+    <p>Nhập chiều cao</p>
+    <input type="number" id="heightSQA">
+</form>
+
+<form action="" id="form_CIR">
+    <p>Nhập bán kính</p>
+    <input type="number" id="radiusCIR">
+</form>
+
+
+ <p><b>Kết quả</b></p>
+ <br>
+ <input type="number" id="resultREC" name="Kết quả">
+ <br>
+ <br>
+ <button type="button" onclick="math_REC()">Tính toán</button>
+ <button type="reset" onclick="reset()">Reset</button>
+</body>
+</html>
+<script>
+    function do_something(){
+        let selectedvalue = document.getElementById("myselect").value;
+        if (selectedvalue = "areaREC"){
+            document.getElementById("form_SQA").innerHTML="";
+            form_CIR.removeChild(child);
+        }
+        if (selectedvalue = "areaSQA") {
+            form_REC.remove;
+            form_CIR.remove;
+        }
+        if (selectedvalue = "areaCIR") {
+            form_REC.remove;
+            form_SQA.remove;
+        }
+    }   
+    function math_REC(){
+        let heightREC=document.getElementById("heightREC").value;
+        let widthREC=document.getElementById("widthREC").value;
+        let resultREC="";
+
+        resultREC=widthREC*heightREC;
+        document.getElementById("resultREC").value=resultREC;
+    }
+
+    function reset(){
+        heightREC.value="";
+        widthREC.value="";
+        result.value="";
+    }
+</script>

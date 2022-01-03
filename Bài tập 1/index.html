@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập năm: </p>
+    <input type="number" id="year">
+    <p>Nhập tháng: </p>
+    <input type="number" id="month">
+    <p>Nhập ngày: </p>
+    <input type="number" id="day">
+    <br>
+    <br>
+    <button onclick="do_something()">Tính ngày</button>
+    <br>
+    <br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function do_something(){
+    let day = document.getElementById("day").value;
+    let month = document.getElementById("month").value;
+    let year = document.getElementById("year").value;
+    let result = "";
+
+    result = day + "/" + month + "/" + year;
+    document.getElementById("result").innerHTML=result;
+    }
+</script>
