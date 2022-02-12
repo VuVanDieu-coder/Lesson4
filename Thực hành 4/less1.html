@@ -7,15 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TÍNH DIỆN TÍCH CÁC HÌNH</h1>
-    <p>Lựa chọn các hình:</p>
-        <select name="myselect" onchange="do_something()" id="myselect">
-            <option value="areaREC">Hình chữ Nhật</option>
-            <option value="areaSQA">Hình Vuông</option>
-            <option value="areaCIR">Hình Tròn</option>
-        </select>
- <!-- Tạo form nhập dữ liệu tính diện tích -->
-
+    <h5>Tính diện tích hình chữ nhật</h5>
     <form action="" id="form_REC">
         <p>Nhập chiều cao</p>
         <input type="number" id="heightREC">
@@ -29,88 +21,20 @@
         <button type="button" onclick="sumREC()">Tính toán</button>
         <button type="reset" onclick="reset_REC()">Reset</button>
     </form>
-
-    <form action="" id="form_SQA">
-        <p>Nhập chiều cao</p>
-        <input type="number" id="heightSQA">
-        <p><b>Kết quả</b></p>
-        <br>
-        <input type="number" id="resultSQA" name="Kết quả">
-        <br>
-        <br>
-        <button type="button" onclick="sumSQA()">Tính toán</button>
-        <button type="reset" onclick="reset_SQA()">Reset</button>
-    </form>
-
-    <form action="" id="form_CIR">
-        <p>Nhập bán kính</p>
-        <input type="number" id="radiusCIR">
-        <p><b>Kết quả</b></p>
-        <br>
-        <input type="number" id="resultCIR" name="Kết quả">
-        <br>
-        <br>
-        <button type="button" onclick="sumCIR()">Tính toán</button>
-        <button type="reset" onclick="reset_CIR()">Reset</button>
-    </form>
 </body>
 </html>
 <script>
-    function do_something(){
-        let selectedvalue = document.getElementById("myselect").value;
-            if (selectedvalue = "areaREC"){
-                document.getElementById("form_SQA").innerHTML="";
-             form_CIR.removeChild(child);
-            }
-            if (selectedvalue = "areaSQA") {
-                form_REC.remove;
-                form_CIR.remove;
-            }
-            if (selectedvalue = "areaCIR") {
-                form_REC.remove;
-                form_SQA.remove;
-            }
-    }  
-    // // Tính toán dành cho form REC
-    // function math_REC(){
-    //     let heightREC=document.getElementById("heightREC").value;
-    //     let widthREC=document.getElementById("widthREC").value;
-    //     let resultREC="";
+    function sumREC(){
+    let heightREC=document.getElementById("heightREC").value;
+    let widthREC=document.getElementById("widthREC").value;
+    let resultREC="";
 
-    //     resultREC=widthREC*heightREC;
-    //     document.getElementById("resultREC").value=resultREC;
-    // }
-    // function reset_REC(){
-    //     heightREC.value="";
-    //     widthREC.value="";
-    //     resultREC.value="";
-    // }
-    // // Tính toán dành cho form Square
-    // function math_SQA(){
-    //     let heightSQA = document.getElementById("heightSQA").value;
-    //     let resultSQA="";
-
-    //     resultSQA=math.pow(heightSQA,2);
-    //     document.getElementById("resultSQA").value=resultSQA;
-    // }
-    // function reset_SQA(){
-    //     heightSQA.value="";
-    //     resultSQA.value="";
-    // }
-    // // Tính toán dành cho form CIRCLE
-    // function math_CIR(){
-    //     const pi = 3.14195;
-    //     let radiusCIR = document.getElementById("radiusCIR").value;
-    //     let resultCIR="";
-
-    //     resultCIR= pi*math.pow(radiusCIR,2);
-    //     document.getElementById("resultCIR").innerHTML=resultCIR;
-    // }
-    // function reset_CIR(){
-    //     radiusCIR.value="";
-    //     resultCIR.value="";
-    // }
+    resultREC=widthREC*heightREC;
+    document.getElementById("resultREC").value=resultREC;
+}
+function reset_REC(){
+    heightREC.value="";
+    widthREC.value="";
+    resultREC.value="";
+}
 </script>
-<script src="math_REC.js"></script>
-<script src="math_SQA.js"></script>
-<script src="math_CIR.js"></script>
